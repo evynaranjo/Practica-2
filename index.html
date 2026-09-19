@@ -30,6 +30,21 @@
       <h1 id="title">Recoge las monedas.</h1>
     </section>
 
+    <section class="player-form" aria-labelledby="player-form-title">
+      <p class="label">JUGADOR</p>
+      <h2 id="player-form-title">Guarda tus datos</h2>
+      <form id="playerForm">
+        <div class="form-fields">
+          <label for="playerName">Nombre</label>
+          <input id="playerName" name="name" type="text" autocomplete="name" required maxlength="40" placeholder="Tu nombre">
+          <label for="playerEmail">Correo</label>
+          <input id="playerEmail" name="email" type="email" autocomplete="email" required placeholder="tu@correo.com">
+        </div>
+        <button class="primary-button" type="submit">Guardar</button>
+        <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
     <section class="game" aria-labelledby="game-title">
       <div class="game-heading">
         <div>
