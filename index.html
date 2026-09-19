@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="Coin Quest, un juego PWA sencillo que funciona sin conexión.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192x192.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Coin Quest</title>
+</head>
+<body>
+  <a class="skip-link" href="#gameBoard">Saltar al tablero</a>
+
+  <header class="site-header">
+    <a class="logo" href="#" aria-label="Coin Quest, inicio">
+      <span aria-hidden="true">C</span>
+      Coin Quest
+    </a>
+    <div class="header-actions">
+      <span id="connectionStatus" class="status" role="status"><i></i> En línea</span>
+      <button id="installButton" class="install-button" type="button" hidden>Instalar</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="title">
+      <p class="label">MINIJUEGO PWA</p>
+      <h1 id="title">Recoge las monedas.</h1>
+      <p>Muévete por el tablero, consigue las ocho monedas y supera tu mejor puntuación.</p>
+    </section>
+
+    <section class="game" aria-labelledby="game-title">
+      <div class="game-heading">
+        <div>
+          <p class="label">NIVEL 01</p>
+          <h2 id="game-title">Coin Quest</h2>
+        </div>
+        <button id="restartButton" class="restart-button" type="button" aria-label="Reiniciar partida">
+          Reiniciar
+        </button>
+      </div>
+
+      <div class="scoreboard" aria-live="polite">
+        <div><small>MONEDAS</small><strong><span id="coinCount">0</span>/<span id="coinTotal">8</span></strong></div>
+        <div><small>PUNTOS</small><strong id="scoreCount">0</strong></div>
+        <div><small>MOVIMIENTOS</small><strong id="moveCount">0</strong></div>
+        <div><small>TIEMPO</small><strong id="timer">00:00</strong></div>
+        <div><small>RÉCORD</small><strong id="bestScore">0</strong></div>
+      </div>
+
+      <div class="progress" aria-label="Progreso de la partida"><span id="progressBar"></span></div>
+
+      <div class="board-wrap">
+        <div id="gameBoard" class="board" role="grid" aria-label="Tablero del juego"></div>
+        <div id="winOverlay" class="win-overlay" hidden>
+          <span class="win-icon" aria-hidden="true">✓</span>
+          <h3>¡Nivel completado!</h3>
+          <p id="winSummary"></p>
+          <button id="playAgainButton" class="primary-button" type="button">Jugar otra vez</button>
+        </div>
+      </div>
+
+      <p id="gameMessage" class="message" aria-live="polite">
+        Usa WASD, las flechas o los botones para moverte.
+      </p>
+
+      <div class="controls" aria-label="Controles de dirección">
+        <button data-direction="up" type="button" aria-label="Arriba">↑</button>
+        <button data-direction="left" type="button" aria-label="Izquierda">←</button>
+        <button data-direction="down" type="button" aria-label="Abajo">↓</button>
+        <button data-direction="right" type="button" aria-label="Derecha">→</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>Coin Quest · Disponible sin conexión</footer>
+  <script src="app.js"></script>
+</body>
+</html>
