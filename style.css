@@ -187,6 +187,19 @@ h1 {
 .form-fields input:focus { border-color: var(--accent); outline: 2px solid #fecaca; }
 .form-message { grid-column: 1 / -1; min-height: 1.2rem; margin: 0; color: var(--muted); font-size: .8rem; }
 
+.saved-players {
+  display: grid;
+  gap: .4rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style-position: inside;
+  color: var(--muted);
+  font-size: .82rem;
+}
+
+.saved-players li { padding: .55rem .7rem; border-radius: 6px; background: #f8fafc; }
+.saved-players strong { color: var(--text); }
+
 .game {
   padding: 2rem;
   border: 1px solid var(--line);

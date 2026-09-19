@@ -1,4 +1,4 @@
-const CACHE = 'coin-quest-v4';
+const CACHE = 'coin-quest-v6';
 const FILES = [
   './',
   './index.html',
